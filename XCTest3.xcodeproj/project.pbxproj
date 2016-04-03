@@ -83,7 +83,8 @@
 				653D5FB01CA516ED00441940 /* XCTest3Tests.swift */,
 				653D5FB21CA516ED00441940 /* Info.plist */,
 			);
-			path = XCTest3Tests;
+			name = XCTest3Tests;
+			path = Tests/XCTest3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,7 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = XCTest3Tests/Info.plist;
+				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,7 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = XCTest3Tests/Info.plist;
+				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
