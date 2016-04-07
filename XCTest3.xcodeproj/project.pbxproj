@@ -10,6 +10,12 @@
 		653D5FAC1CA516ED00441940 /* XCTest3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653D5FA11CA516ED00441940 /* XCTest3.framework */; };
 		653D5FB11CA516ED00441940 /* XCTest3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FB01CA516ED00441940 /* XCTest3Tests.swift */; };
 		653D5FBC1CA5170D00441940 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FBB1CA5170D00441940 /* XCTestCase.swift */; };
+		925CEBE61CB62AAF000AD550 /* XCTest3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925CEBDC1CB62AAF000AD550 /* XCTest3.framework */; };
+		925CEC021CB62B39000AD550 /* XCTest3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925CEBF81CB62B39000AD550 /* XCTest3.framework */; };
+		925CEC101CB62B45000AD550 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FBB1CA5170D00441940 /* XCTestCase.swift */; };
+		925CEC111CB62BBE000AD550 /* XCTest3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FB01CA516ED00441940 /* XCTest3Tests.swift */; };
+		925CEC121CB62BBF000AD550 /* XCTest3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FB01CA516ED00441940 /* XCTest3Tests.swift */; };
+		925CEC131CB62C3A000AD550 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FBB1CA5170D00441940 /* XCTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +26,33 @@
 			remoteGlobalIDString = 653D5FA01CA516ED00441940;
 			remoteInfo = XCTest3;
 		};
+		925CEBE71CB62AAF000AD550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 653D5F981CA516ED00441940 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 925CEBDB1CB62AAF000AD550;
+			remoteInfo = XCTest3;
+		};
+		925CEC031CB62B39000AD550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 653D5F981CA516ED00441940 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 925CEBF71CB62B39000AD550;
+			remoteInfo = XCTest3;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		653D5FA11CA516ED00441940 /* XCTest3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTest3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		653D5FA61CA516ED00441940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		653D5FAB1CA516ED00441940 /* XCTest3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCTest3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		653D5FAB1CA516ED00441940 /* XCTest3Tests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XCTest3Tests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		653D5FB01CA516ED00441940 /* XCTest3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest3Tests.swift; sourceTree = "<group>"; };
 		653D5FB21CA516ED00441940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653D5FBB1CA5170D00441940 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		925CEBDC1CB62AAF000AD550 /* XCTest3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTest3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		925CEBE51CB62AAF000AD550 /* XCTest3Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XCTest3Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		925CEBF81CB62B39000AD550 /* XCTest3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTest3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		925CEC011CB62B39000AD550 /* XCTest3Tests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XCTest3Tests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +68,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				653D5FAC1CA516ED00441940 /* XCTest3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBD81CB62AAF000AD550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBE21CB62AAF000AD550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925CEBE61CB62AAF000AD550 /* XCTest3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBF41CB62B39000AD550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBFE1CB62B39000AD550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925CEC021CB62B39000AD550 /* XCTest3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				653D5FA11CA516ED00441940 /* XCTest3.framework */,
-				653D5FAB1CA516ED00441940 /* XCTest3Tests.xctest */,
+				653D5FAB1CA516ED00441940 /* XCTest3Tests-OSX.xctest */,
+				925CEBDC1CB62AAF000AD550 /* XCTest3.framework */,
+				925CEBE51CB62AAF000AD550 /* XCTest3Tests-iOS.xctest */,
+				925CEBF81CB62B39000AD550 /* XCTest3.framework */,
+				925CEC011CB62B39000AD550 /* XCTest3Tests-tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +155,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		925CEBD91CB62AAF000AD550 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBF51CB62B39000AD550 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		653D5FA01CA516ED00441940 /* XCTest3 */ = {
+		653D5FA01CA516ED00441940 /* XCTest3-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 653D5FB51CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3" */;
+			buildConfigurationList = 653D5FB51CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3-OSX" */;
 			buildPhases = (
 				653D5F9C1CA516ED00441940 /* Sources */,
 				653D5F9D1CA516ED00441940 /* Frameworks */,
@@ -113,14 +185,14 @@
 			);
 			dependencies = (
 			);
-			name = XCTest3;
+			name = "XCTest3-OSX";
 			productName = XCTest3;
 			productReference = 653D5FA11CA516ED00441940 /* XCTest3.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		653D5FAA1CA516ED00441940 /* XCTest3Tests */ = {
+		653D5FAA1CA516ED00441940 /* XCTest3Tests-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 653D5FB81CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3Tests" */;
+			buildConfigurationList = 653D5FB81CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3Tests-OSX" */;
 			buildPhases = (
 				653D5FA71CA516ED00441940 /* Sources */,
 				653D5FA81CA516ED00441940 /* Frameworks */,
@@ -131,9 +203,81 @@
 			dependencies = (
 				653D5FAE1CA516ED00441940 /* PBXTargetDependency */,
 			);
-			name = XCTest3Tests;
+			name = "XCTest3Tests-OSX";
 			productName = XCTest3Tests;
-			productReference = 653D5FAB1CA516ED00441940 /* XCTest3Tests.xctest */;
+			productReference = 653D5FAB1CA516ED00441940 /* XCTest3Tests-OSX.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		925CEBDB1CB62AAF000AD550 /* XCTest3-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 925CEBED1CB62AAF000AD550 /* Build configuration list for PBXNativeTarget "XCTest3-iOS" */;
+			buildPhases = (
+				925CEBD71CB62AAF000AD550 /* Sources */,
+				925CEBD81CB62AAF000AD550 /* Frameworks */,
+				925CEBD91CB62AAF000AD550 /* Headers */,
+				925CEBDA1CB62AAF000AD550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XCTest3-iOS";
+			productName = XCTest3;
+			productReference = 925CEBDC1CB62AAF000AD550 /* XCTest3.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		925CEBE41CB62AAF000AD550 /* XCTest3Tests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 925CEBF01CB62AAF000AD550 /* Build configuration list for PBXNativeTarget "XCTest3Tests-iOS" */;
+			buildPhases = (
+				925CEBE11CB62AAF000AD550 /* Sources */,
+				925CEBE21CB62AAF000AD550 /* Frameworks */,
+				925CEBE31CB62AAF000AD550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				925CEBE81CB62AAF000AD550 /* PBXTargetDependency */,
+			);
+			name = "XCTest3Tests-iOS";
+			productName = XCTest3Tests;
+			productReference = 925CEBE51CB62AAF000AD550 /* XCTest3Tests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		925CEBF71CB62B39000AD550 /* XCTest3-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 925CEC091CB62B39000AD550 /* Build configuration list for PBXNativeTarget "XCTest3-tvOS" */;
+			buildPhases = (
+				925CEBF31CB62B39000AD550 /* Sources */,
+				925CEBF41CB62B39000AD550 /* Frameworks */,
+				925CEBF51CB62B39000AD550 /* Headers */,
+				925CEBF61CB62B39000AD550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XCTest3-tvOS";
+			productName = XCTest3;
+			productReference = 925CEBF81CB62B39000AD550 /* XCTest3.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		925CEC001CB62B39000AD550 /* XCTest3Tests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 925CEC0C1CB62B39000AD550 /* Build configuration list for PBXNativeTarget "XCTest3Tests-tvOS" */;
+			buildPhases = (
+				925CEBFD1CB62B39000AD550 /* Sources */,
+				925CEBFE1CB62B39000AD550 /* Frameworks */,
+				925CEBFF1CB62B39000AD550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				925CEC041CB62B39000AD550 /* PBXTargetDependency */,
+			);
+			name = "XCTest3Tests-tvOS";
+			productName = XCTest3Tests;
+			productReference = 925CEC011CB62B39000AD550 /* XCTest3Tests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -152,6 +296,18 @@
 					653D5FAA1CA516ED00441940 = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					925CEBDB1CB62AAF000AD550 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					925CEBE41CB62AAF000AD550 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					925CEBF71CB62B39000AD550 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					925CEC001CB62B39000AD550 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = 653D5F9B1CA516ED00441940 /* Build configuration list for PBXProject "XCTest3" */;
@@ -166,8 +322,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				653D5FA01CA516ED00441940 /* XCTest3 */,
-				653D5FAA1CA516ED00441940 /* XCTest3Tests */,
+				653D5FA01CA516ED00441940 /* XCTest3-OSX */,
+				653D5FAA1CA516ED00441940 /* XCTest3Tests-OSX */,
+				925CEBDB1CB62AAF000AD550 /* XCTest3-iOS */,
+				925CEBE41CB62AAF000AD550 /* XCTest3Tests-iOS */,
+				925CEBF71CB62B39000AD550 /* XCTest3-tvOS */,
+				925CEC001CB62B39000AD550 /* XCTest3Tests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +341,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		653D5FA91CA516ED00441940 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBDA1CB62AAF000AD550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBE31CB62AAF000AD550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBF61CB62B39000AD550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBFF1CB62B39000AD550 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,13 +394,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		925CEBD71CB62AAF000AD550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925CEC131CB62C3A000AD550 /* XCTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBE11CB62AAF000AD550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925CEC111CB62BBE000AD550 /* XCTest3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBF31CB62B39000AD550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925CEC101CB62B45000AD550 /* XCTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925CEBFD1CB62B39000AD550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925CEC121CB62BBF000AD550 /* XCTest3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		653D5FAE1CA516ED00441940 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 653D5FA01CA516ED00441940 /* XCTest3 */;
+			target = 653D5FA01CA516ED00441940 /* XCTest3-OSX */;
 			targetProxy = 653D5FAD1CA516ED00441940 /* PBXContainerItemProxy */;
+		};
+		925CEBE81CB62AAF000AD550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 925CEBDB1CB62AAF000AD550 /* XCTest3-iOS */;
+			targetProxy = 925CEBE71CB62AAF000AD550 /* PBXContainerItemProxy */;
+		};
+		925CEC041CB62B39000AD550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 925CEBF71CB62B39000AD550 /* XCTest3-tvOS */;
+			targetProxy = 925CEC031CB62B39000AD550 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -321,7 +551,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -343,7 +573,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -370,6 +600,142 @@
 			};
 			name = Release;
 		};
+		925CEBEE1CB62AAF000AD550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = XCTest3/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		925CEBEF1CB62AAF000AD550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = XCTest3/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		925CEBF11CB62AAF000AD550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		925CEBF21CB62AAF000AD550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		925CEC0A1CB62B39000AD550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = XCTest3/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		925CEC0B1CB62B39000AD550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = XCTest3/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		925CEC0D1CB62B39000AD550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		925CEC0E1CB62B39000AD550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -382,7 +748,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		653D5FB51CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3" */ = {
+		653D5FB51CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				653D5FB61CA516ED00441940 /* Debug */,
@@ -391,11 +757,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		653D5FB81CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3Tests" */ = {
+		653D5FB81CA516ED00441940 /* Build configuration list for PBXNativeTarget "XCTest3Tests-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				653D5FB91CA516ED00441940 /* Debug */,
 				653D5FBA1CA516ED00441940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		925CEBED1CB62AAF000AD550 /* Build configuration list for PBXNativeTarget "XCTest3-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925CEBEE1CB62AAF000AD550 /* Debug */,
+				925CEBEF1CB62AAF000AD550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		925CEBF01CB62AAF000AD550 /* Build configuration list for PBXNativeTarget "XCTest3Tests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925CEBF11CB62AAF000AD550 /* Debug */,
+				925CEBF21CB62AAF000AD550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		925CEC091CB62B39000AD550 /* Build configuration list for PBXNativeTarget "XCTest3-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925CEC0A1CB62B39000AD550 /* Debug */,
+				925CEC0B1CB62B39000AD550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		925CEC0C1CB62B39000AD550 /* Build configuration list for PBXNativeTarget "XCTest3Tests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925CEC0D1CB62B39000AD550 /* Debug */,
+				925CEC0E1CB62B39000AD550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
