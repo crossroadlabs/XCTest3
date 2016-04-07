@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "653D5FA01CA516ED00441940"
+               BlueprintIdentifier = "925CEBF71CB62B39000AD550"
                BuildableName = "XCTest3.framework"
-               BlueprintName = "XCTest3"
+               BlueprintName = "XCTest3-tvOS"
                ReferencedContainer = "container:XCTest3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "653D5FAA1CA516ED00441940"
-               BuildableName = "XCTest3Tests.xctest"
-               BlueprintName = "XCTest3Tests"
+               BlueprintIdentifier = "925CEC001CB62B39000AD550"
+               BuildableName = "XCTest3Tests-tvOS.xctest"
+               BlueprintName = "XCTest3Tests-tvOS"
                ReferencedContainer = "container:XCTest3.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "653D5FA01CA516ED00441940"
+            BlueprintIdentifier = "925CEBF71CB62B39000AD550"
             BuildableName = "XCTest3.framework"
-            BlueprintName = "XCTest3"
+            BlueprintName = "XCTest3-tvOS"
             ReferencedContainer = "container:XCTest3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "653D5FA01CA516ED00441940"
+            BlueprintIdentifier = "925CEBF71CB62B39000AD550"
             BuildableName = "XCTest3.framework"
-            BlueprintName = "XCTest3"
+            BlueprintName = "XCTest3-tvOS"
             ReferencedContainer = "container:XCTest3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "653D5FA01CA516ED00441940"
+            BlueprintIdentifier = "925CEBF71CB62B39000AD550"
             BuildableName = "XCTest3.framework"
-            BlueprintName = "XCTest3"
+            BlueprintName = "XCTest3-tvOS"
             ReferencedContainer = "container:XCTest3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
