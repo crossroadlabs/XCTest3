@@ -15,8 +15,10 @@
 //===----------------------------------------------------------------------===//
 
 import XCTest
+import Foundation
+import Boilerplate
 
-#if swift(>=3.0)
+#if swift(>=3.0) && !os(Linux)
 #else
     /*!
      * @category AsynchronousTesting
@@ -30,7 +32,6 @@ import XCTest
      */
     public extension XCTestCase {
         
-        
         /*!
          * @method -expectationWithDescription:
          *
@@ -40,11 +41,17 @@ import XCTest
          * @discussion
          * Creates and returns an expectation associated with the test case.
          */
-        @objc(expectation:)
-        public func expectation(withDescription description: String) -> XCTestExpectation {
-            return self.expectationWithDescription(description)
-        }
         
+        #if os(Linux)
+            public func expectation(withDescription description: String) -> XCTestExpectation {
+                return self.expectationWithDescription(description)
+            }
+        #else
+            @objc(expectation:)
+            public func expectation(withDescription description: String) -> XCTestExpectation {
+                return self.expectationWithDescription(description)
+            }
+        #endif
         
         /*!
          * @typedef XCWaitCompletionHandler
@@ -75,11 +82,17 @@ import XCTest
          * are fulfilled or the timeout is reached. Clients should not manipulate the run
          * loop while using this API.
          */
-        
-        @objc(waitForExpectations:handler:)
-        public func waitForExpectations(withTimeout timeout: NSTimeInterval, handler: XCWaitCompletionHandler? = nil) {
-            self.waitForExpectationsWithTimeout(timeout, handler: handler)
-        }
+        #if os(Linux)
+            public typealias XCWaitCompletionHandler = (NSError?) -> ()
+            public func waitForExpectations(withTimeout timeout: NSTimeInterval, handler: XCWaitCompletionHandler? = nil) {
+               self.waitForExpectationsWithTimeout(timeout, handler: handler)
+            }
+        #else
+            @objc(waitForExpectations:handler:)
+            public func waitForExpectations(withTimeout timeout: NSTimeInterval, handler: XCWaitCompletionHandler? = nil) {
+               self.waitForExpectationsWithTimeout(timeout, handler: handler)
+            }
+        #endif
         
         
         /*!
@@ -105,10 +118,15 @@ import XCTest
          * @return
          * Creates and returns an expectation associated with the test case.
          */
-        
-        public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
-            return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, expectedValue: expectedValue)
-        }
+        #if os(Linux)
+            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation").panic()
+            }
+        #else
+            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
+                return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, expectedValue: expectedValue)
+            }
+        #endif
         
         
         /*!
@@ -148,9 +166,16 @@ import XCTest
          * Creates and returns an expectation associated with the test case.
          */
         
-        public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
-            return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, handler: handler)
-        }
+        #if os(Linux)
+            typealias XCKeyValueObservingExpectationHandler = (observedObject: AnyObject?, change : NSDictionary?) -> (Bool)
+            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation").panic()
+           }
+        #else
+            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
+                return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, handler: handler)
+           }
+        #endif
         
         
         /*!
@@ -186,10 +211,17 @@ import XCTest
          * Creates and returns an expectation associated with the test case.
          */
         
-        @objc(expectation:object:handler:)
-        public func expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation {
-            return self.expectationForNotification(notificationName, object: objectToObserve, handler: handler)
-        }
+        #if os(Linux)
+            public typealias XCNotificationExpectationHandler = (NSNotification) -> (Bool)
+            public func expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation").panic()
+            }
+        #else
+            @objc(expectation:object:handler:)
+            public func expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation {
+                return self.expectationForNotification(notificationName, object: objectToObserve, handler: handler)
+            }
+        #endif
         
         
         /*!
@@ -205,10 +237,16 @@ import XCTest
          * object. The expectation periodically evaluates the predicate and also may use notifications or other
          * events to optimistically re-evaluate.
          */
-        
-        public func expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation {
-            return self.expectationForPredicate(predicate, evaluatedWithObject: object, handler: handler)
-        }
+        #if os(Linux)
+            public typealias XCPredicateExpectationHandler = () -> (Bool)
+            public func expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation").panic()
+                }
+        #else
+           public func expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation {
+                return self.expectationForPredicate(predicate, evaluatedWithObject: object, handler: handler)
+           }
+        #endif
     }
     
     /// Measurement extension
@@ -229,9 +267,16 @@ import XCTest
          
          * @param block A block whose performance to measure.
          */
-        public func measure(block: () -> Swift.Void) {
-            self.measureBlock(block)
-        }
+
+        #if os(Linux)
+            public func measure(block: () -> Swift.Void) {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.measure(block: () -> Void)").panic()
+            }
+        #else
+            public func measure(block: () -> Swift.Void) {
+                self.measureBlock(block)
+            }
+        #endif
         
         
         /*!
@@ -274,9 +319,14 @@ import XCTest
          *
          * @param block A block whose performance to measure.
          */
-        
-        public func measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void) {
-            self.measureMetrics(metrics, automaticallyStartMeasuring: automaticallyStartMeasuring, forBlock: block)
-        }
+        #if os(Linux)
+            public func measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void) {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void)").panic()
+            }
+        #else
+            public func measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void) {
+                self.measureMetrics(metrics, automaticallyStartMeasuring: automaticallyStartMeasuring, forBlock: block)
+            }
+        #endif
     }
 #endif
