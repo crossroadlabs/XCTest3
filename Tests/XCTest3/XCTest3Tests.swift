@@ -18,6 +18,7 @@ class XCTest3Tests: XCTestCase {
         self.waitForExpectations(withTimeout: 0)
     }
     
+    #if !os(Linux)
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
@@ -25,6 +26,7 @@ class XCTest3Tests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    #endif
 }
 
 #if os(Linux)
@@ -32,7 +34,6 @@ extension XCTest3Tests {
 	static var allTests : [(String, XCTest3Tests -> () throws -> Void)] {
 		return [
 			("testExpectation", testExpectation),
-			("testPerformanceExample", testPerformanceExample),
 		]
 	}
 }
