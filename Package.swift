@@ -19,6 +19,6 @@ import PackageDescription
 let package = Package(
     name: "XCTest3",
     targets: [Target(name: "XCTest3")],
-    dependencies: [.Package(url: "https://github.com/crossroadlabs/Boilerplate.git", majorVersion: 0)]
+    dependencies: [.Package(url: "https://github.com/crossroadlabs/Boilerplate.git", majorVersion: 0, minor: 1)]
 
 )
