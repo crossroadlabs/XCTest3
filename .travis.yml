@@ -1,0 +1,51 @@
+env:
+  global:
+    - MODULE_NAME=XCTest3
+matrix:
+  include:
+    - script:
+        - xcodebuild test -project $MODULE_NAME.xcodeproj -scheme $MODULE_NAME-OSX
+        - xcodebuild test -project $MODULE_NAME.xcodeproj -scheme $MODULE_NAME-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6'
+        - xcodebuild build -project $MODULE_NAME.xcodeproj -scheme $MODULE_NAME-tvOS -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p'
+        - xcodebuild build -project $MODULE_NAME.xcodeproj -scheme $MODULE_NAME-watchOS -sdk watchsimulator -destination 'platform=watchOS Simulator,name=Apple Watch - 42mm'
+      os: osx
+      osx_image: xcode7.3
+      language: objective-c
+      env:
+        secure: rPZrHHTAV5m1fVIRqg6xJmnC1g7d1q1yZs0vgtje772IoNK4dm0M471R6E6FHGM3aDf+yYJ1LupFS0QRJqbB1vqBTlkssbwO1/5tFJU62pK9bmbdLNae6U85QDK6axHdLcm0W7RhJR0MMyKOQjJ6113PSZ40i7pFUYWd1NPNdR+NADdHddyFzzFJOqSRd7Io+p1p36VHcbUfvdpBftiUFLVEwuzPiKJdyVL4HiIxeAj6b0zH4P1PojZ+gXYXRap1Bq1IlCbHauTCcqQJWgHYeaMnmyLmqPAKhEDZM/ZyPUR6ZDFz+t86eMVmc2LvSkTnf3Xi3g/wfCXSk7uni+WIoC5lvoRrE3qxvEmswQe9U92qPD+rQkDC8dndCt2URy50gQq/Z6QQBOk+n2am80O/qvkVrPqwt1JWlzmZUxhTCosOJt5AonbHvXnFh69iXyFeyKiypa7pl9oBMJLCqrv0zJvN6G3sUVpQvzuqUz3OCQvdtXX3ZRGtBbwHtI4kFvZkDqiNq+wZWILqeUfgq5xds4aa6MvDEPK8DOctiBHVmnyVfRUd2v9kfAxeBRVp8qxqViLhehQ2DuE7nOND+LoXDVpQ7+I0/7QmF6w80BEzCJvJEVnd0KBChsJMYfV77fKuYR1rNoUG496ayE3TSS/knEP31eMyFiEF8FTtfDIIfig=
+      before_install:
+        - brew update
+        - brew outdated carthage || brew upgrade carthage
+        # - brew outdated xctool || brew upgrade xctool
+      before_script:
+        # bootstrap the dependencies for the project
+        # you can remove if you don't have dependencies
+        - carthage bootstrap
+      deploy:
+        provider: script
+        script: .scripts/pod
+        skip_cleanup: true
+        on:
+          repo: crossroadlabs/XCTest3
+          tags: true
+    - script:
+        - ./build test
+      sudo: required
+      dist: trusty
+      language: generic
+      before_install:
+        # install original swift distribution
+        - wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
+        - cd ..
+        - export SWIFT_VERSION="swift-DEVELOPMENT-SNAPSHOT-2016-03-24-a"
+        - wget https://swift.org/builds/development/ubuntu1404/$SWIFT_VERSION/$SWIFT_VERSION-ubuntu14.04.tar.gz
+        - tar xzf $SWIFT_VERSION-ubuntu14.04.tar.gz
+        - export PATH="${PWD}/${SWIFT_VERSION}-ubuntu14.04/usr/bin:${PATH}"
+        - export LD_LIBRARY_PATH="${PWD}/${SWIFT_VERSION}-ubuntu14.04/usr/lib/swift/linux/:$LD_LIBRARY_PATH"
+        # get back home
+        - cd $MODULE_NAME
+        # get crossroad build script
+        - wget https://raw.githubusercontent.com/crossroadlabs/utils/master/build
+        - chmod +x build
+notifications:
+  email: false
