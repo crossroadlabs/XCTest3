@@ -13,8 +13,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
 
   s.source_files = 'XCTest3/*.swift'
-  
-  s.dependency 'Boilerplate', '~> 0.2'
 
   s.requires_arc = true
   s.frameworks = 'XCTest'
