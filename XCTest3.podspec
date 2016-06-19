@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'XCTest3'
-  s.version = '0.1.1'
+  s.version = '0.2.0'
   s.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.summary = 'Swift XCTest Shims that mimic Swift 3.0 API. For thous who wants to maintain Swift multiple versions compatibility'
   s.homepage = 'https://github.com/crossroadlabs/XCTest3'
