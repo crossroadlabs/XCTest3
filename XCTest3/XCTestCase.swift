@@ -16,68 +16,8 @@
 
 import XCTest
 import Foundation
-import Boilerplate
 
 #if swift(>=3.0)
-    #if os(Linux)
-        public extension XCTestCase {
-            /*!
-            * @method -keyValueObservingExpectationForObject:keyPath:expectedValue:
-            *
-            * @discussion
-            * A convenience method for asynchronous tests that use Key Value Observing to detect changes
-            * to values on an object. This variant takes an expected value and observes changes on the object
-            * until the keyPath's value matches the expected value using -[NSObject isEqual:]. If
-            * other comparisions are needed, use the variant below that takes a handler block.
-            *
-            * @param objectToObserve
-            * The object to observe.
-            *
-            * @param keyPath
-            * The key path to observe.
-            *
-            * @param expectedValue
-            * Expected value of the keyPath for the object. The expectation will fulfill itself when the
-            * keyPath is equal, as tested using -[NSObject isEqual:]. If nil, the expectation will be
-            * fulfilled by the first change to the key path of the observed object.
-            *
-            * @return
-            * Creates and returns an expectation associated with the test case.
-            */
-            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation").panic()
-            }
-
-            /*!
-             * @method -keyValueObservingExpectationForObject:keyPath:handler:
-             *
-             * @discussion
-             * Variant of the convenience for tests that use Key Value Observing. Takes a handler
-             * block instead of an expected value. Every KVO change will run the handler block until
-             * it returns YES (or the wait times out). Returning YES from the block will fulfill the
-             * expectation. XCTAssert and related APIs can be used in the block to report a failure.
-             *
-             * @param objectToObserve
-             * The object to observe.
-             *
-             * @param keyPath
-             * The key path to observe.
-             *
-             * @param handler
-             * Optional handler, /see XCKeyValueObservingExpectationHandler. If not provided, the expectation will
-             * be fulfilled by the first change to the key path of the observed object.
-             *
-             * @return
-             * Creates and returns an expectation associated with the test case.
-             */
-
-            typealias XCKeyValueObservingExpectationHandler = (observedObject: AnyObject?, change : NSDictionary?) -> (Bool)
-            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation").panic()
-            }
-
-        }
-    #endif
 #else
     /*!
      * @category AsynchronousTesting
