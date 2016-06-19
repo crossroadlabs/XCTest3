@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'XCTest3/*.swift'
   
-  s.dependency 'Boilerplate', '~> 0.1'
+  s.dependency 'Boilerplate', '~> 0.2'
 
   s.requires_arc = true
   s.frameworks = 'XCTest'
