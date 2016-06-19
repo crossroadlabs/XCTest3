@@ -18,7 +18,66 @@ import XCTest
 import Foundation
 import Boilerplate
 
-#if swift(>=3.0) && !os(Linux)
+#if swift(>=3.0)
+    #if os(Linux)
+        public extension XCTestCase {
+            /*!
+            * @method -keyValueObservingExpectationForObject:keyPath:expectedValue:
+            *
+            * @discussion
+            * A convenience method for asynchronous tests that use Key Value Observing to detect changes
+            * to values on an object. This variant takes an expected value and observes changes on the object
+            * until the keyPath's value matches the expected value using -[NSObject isEqual:]. If
+            * other comparisions are needed, use the variant below that takes a handler block.
+            *
+            * @param objectToObserve
+            * The object to observe.
+            *
+            * @param keyPath
+            * The key path to observe.
+            *
+            * @param expectedValue
+            * Expected value of the keyPath for the object. The expectation will fulfill itself when the
+            * keyPath is equal, as tested using -[NSObject isEqual:]. If nil, the expectation will be
+            * fulfilled by the first change to the key path of the observed object.
+            *
+            * @return
+            * Creates and returns an expectation associated with the test case.
+            */
+            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation").panic()
+            }
+
+            /*!
+             * @method -keyValueObservingExpectationForObject:keyPath:handler:
+             *
+             * @discussion
+             * Variant of the convenience for tests that use Key Value Observing. Takes a handler
+             * block instead of an expected value. Every KVO change will run the handler block until
+             * it returns YES (or the wait times out). Returning YES from the block will fulfill the
+             * expectation. XCTAssert and related APIs can be used in the block to report a failure.
+             *
+             * @param objectToObserve
+             * The object to observe.
+             *
+             * @param keyPath
+             * The key path to observe.
+             *
+             * @param handler
+             * Optional handler, /see XCKeyValueObservingExpectationHandler. If not provided, the expectation will
+             * be fulfilled by the first change to the key path of the observed object.
+             *
+             * @return
+             * Creates and returns an expectation associated with the test case.
+             */
+
+            typealias XCKeyValueObservingExpectationHandler = (observedObject: AnyObject?, change : NSDictionary?) -> (Bool)
+            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
+                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation").panic()
+            }
+
+        }
+    #endif
 #else
     /*!
      * @category AsynchronousTesting
@@ -42,16 +101,11 @@ import Boilerplate
          * Creates and returns an expectation associated with the test case.
          */
         
-        #if os(Linux)
-            public func expectation(withDescription description: String) -> XCTestExpectation {
-                return self.expectationWithDescription(description)
-            }
-        #else
-            @objc(expectation:)
-            public func expectation(withDescription description: String) -> XCTestExpectation {
-                return self.expectationWithDescription(description)
-            }
-        #endif
+
+        @objc(expectation:)
+        public func expectation(withDescription description: String) -> XCTestExpectation {
+            return self.expectationWithDescription(description)
+        }
         
         /*!
          * @typedef XCWaitCompletionHandler
@@ -82,18 +136,12 @@ import Boilerplate
          * are fulfilled or the timeout is reached. Clients should not manipulate the run
          * loop while using this API.
          */
-        #if os(Linux)
-            public typealias XCWaitCompletionHandler = (NSError?) -> ()
-            public func waitForExpectations(withTimeout timeout: NSTimeInterval, handler: XCWaitCompletionHandler? = nil) {
-               self.waitForExpectationsWithTimeout(timeout, handler: handler)
-            }
-        #else
-            @objc(waitForExpectations:handler:)
-            public func waitForExpectations(withTimeout timeout: NSTimeInterval, handler: XCWaitCompletionHandler? = nil) {
-               self.waitForExpectationsWithTimeout(timeout, handler: handler)
-            }
-        #endif
-        
+
+        @objc(waitForExpectations:handler:)
+        public func waitForExpectations(withTimeout timeout: NSTimeInterval, handler: XCWaitCompletionHandler? = nil) {
+            self.waitForExpectationsWithTimeout(timeout, handler: handler)
+        }
+
         
         /*!
          * @method -keyValueObservingExpectationForObject:keyPath:expectedValue:
@@ -118,15 +166,10 @@ import Boilerplate
          * @return
          * Creates and returns an expectation associated with the test case.
          */
-        #if os(Linux)
-            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation").panic()
-            }
-        #else
-            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
-                return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, expectedValue: expectedValue)
-            }
-        #endif
+
+        public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, expectedValue: AnyObject?) -> XCTestExpectation {
+            return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, expectedValue: expectedValue)
+        }
         
         
         /*!
@@ -165,17 +208,10 @@ import Boilerplate
          * @return
          * Creates and returns an expectation associated with the test case.
          */
-        
-        #if os(Linux)
-            typealias XCKeyValueObservingExpectationHandler = (observedObject: AnyObject?, change : NSDictionary?) -> (Bool)
-            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation").panic()
-           }
-        #else
-            public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
-                return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, handler: handler)
-           }
-        #endif
+
+        public func keyValueObservingExpectation(for objectToObserve: AnyObject, keyPath: String, handler: XCKeyValueObservingExpectationHandler? = nil) -> XCTestExpectation {
+            return self.keyValueObservingExpectationForObject(objectToObserve, keyPath: keyPath, handler: handler)
+        }
         
         
         /*!
@@ -211,17 +247,11 @@ import Boilerplate
          * Creates and returns an expectation associated with the test case.
          */
         
-        #if os(Linux)
-            public typealias XCNotificationExpectationHandler = (NSNotification) -> (Bool)
-            public func expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation").panic()
-            }
-        #else
-            @objc(expectation:object:handler:)
-            public func expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation {
-                return self.expectationForNotification(notificationName, object: objectToObserve, handler: handler)
-            }
-        #endif
+
+        @objc(expectation:object:handler:)
+        public func expectation(forNotification notificationName: String, object objectToObserve: AnyObject?, handler: XCNotificationExpectationHandler? = nil) -> XCTestExpectation {
+            return self.expectationForNotification(notificationName, object: objectToObserve, handler: handler)
+        }
         
         
         /*!
@@ -237,16 +267,10 @@ import Boilerplate
          * object. The expectation periodically evaluates the predicate and also may use notifications or other
          * events to optimistically re-evaluate.
          */
-        #if os(Linux)
-            public typealias XCPredicateExpectationHandler = () -> (Bool)
-            public func expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation").panic()
-                }
-        #else
-           public func expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation {
-                return self.expectationForPredicate(predicate, evaluatedWithObject: object, handler: handler)
-           }
-        #endif
+
+        public func expectation(for predicate: NSPredicate, evaluatedWith object: AnyObject, handler: XCPredicateExpectationHandler? = nil) -> XCTestExpectation {
+            return self.expectationForPredicate(predicate, evaluatedWithObject: object, handler: handler)
+        }
     }
     
     /// Measurement extension
@@ -268,15 +292,9 @@ import Boilerplate
          * @param block A block whose performance to measure.
          */
 
-        #if os(Linux)
-            public func measure(block: () -> Swift.Void) {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.measure(block: () -> Void)").panic()
-            }
-        #else
-            public func measure(block: () -> Swift.Void) {
-                self.measureBlock(block)
-            }
-        #endif
+        public func measure(block: () -> Swift.Void) {
+            self.measureBlock(block)
+        }
         
         
         /*!
@@ -319,14 +337,9 @@ import Boilerplate
          *
          * @param block A block whose performance to measure.
          */
-        #if os(Linux)
-            public func measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void) {
-                CommonRuntimeError.NotImplemented(what: "XCTestCase.measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void)").panic()
-            }
-        #else
-            public func measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void) {
-                self.measureMetrics(metrics, automaticallyStartMeasuring: automaticallyStartMeasuring, forBlock: block)
-            }
-        #endif
+
+        public func measureMetrics(metrics: [String], automaticallyStartMeasuring: Bool, for block: () -> Swift.Void) {
+            self.measureMetrics(metrics, automaticallyStartMeasuring: automaticallyStartMeasuring, forBlock: block)
+        }
     }
 #endif
