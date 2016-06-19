@@ -14,13 +14,8 @@ matrix:
       env:
         secure: rPZrHHTAV5m1fVIRqg6xJmnC1g7d1q1yZs0vgtje772IoNK4dm0M471R6E6FHGM3aDf+yYJ1LupFS0QRJqbB1vqBTlkssbwO1/5tFJU62pK9bmbdLNae6U85QDK6axHdLcm0W7RhJR0MMyKOQjJ6113PSZ40i7pFUYWd1NPNdR+NADdHddyFzzFJOqSRd7Io+p1p36VHcbUfvdpBftiUFLVEwuzPiKJdyVL4HiIxeAj6b0zH4P1PojZ+gXYXRap1Bq1IlCbHauTCcqQJWgHYeaMnmyLmqPAKhEDZM/ZyPUR6ZDFz+t86eMVmc2LvSkTnf3Xi3g/wfCXSk7uni+WIoC5lvoRrE3qxvEmswQe9U92qPD+rQkDC8dndCt2URy50gQq/Z6QQBOk+n2am80O/qvkVrPqwt1JWlzmZUxhTCosOJt5AonbHvXnFh69iXyFeyKiypa7pl9oBMJLCqrv0zJvN6G3sUVpQvzuqUz3OCQvdtXX3ZRGtBbwHtI4kFvZkDqiNq+wZWILqeUfgq5xds4aa6MvDEPK8DOctiBHVmnyVfRUd2v9kfAxeBRVp8qxqViLhehQ2DuE7nOND+LoXDVpQ7+I0/7QmF6w80BEzCJvJEVnd0KBChsJMYfV77fKuYR1rNoUG496ayE3TSS/knEP31eMyFiEF8FTtfDIIfig=
       before_install:
-        - brew update
-        - brew outdated carthage || brew upgrade carthage
+        # - brew update
         # - brew outdated xctool || brew upgrade xctool
-      before_script:
-        # bootstrap the dependencies for the project
-        # you can remove if you don't have dependencies
-        - carthage bootstrap
       deploy:
         provider: script
         script: .scripts/pod
