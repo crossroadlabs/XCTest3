@@ -15,25 +15,7 @@
 		925CEC111CB62BBE000AD550 /* XCTest3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FB01CA516ED00441940 /* XCTest3Tests.swift */; };
 		925CEC121CB62BBF000AD550 /* XCTest3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FB01CA516ED00441940 /* XCTest3Tests.swift */; };
 		925CEC131CB62C3A000AD550 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D5FBB1CA5170D00441940 /* XCTestCase.swift */; };
-		92E408C71CB69A70001ED069 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408BF1CB69A43001ED069 /* Boilerplate.framework */; };
-		92E408C81CB69A73001ED069 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408C11CB69A43001ED069 /* Result.framework */; };
-		92E408CA1CB69A88001ED069 /* Boilerplate.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408BF1CB69A43001ED069 /* Boilerplate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92E408CB1CB69A8B001ED069 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408C11CB69A43001ED069 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92E408D21CB69AB0001ED069 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408BF1CB69A43001ED069 /* Boilerplate.framework */; };
-		92E408D31CB69AB3001ED069 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408C11CB69A43001ED069 /* Result.framework */; };
-		92E408DA1CB69AE9001ED069 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408CC1CB69AA7001ED069 /* Boilerplate.framework */; };
-		92E408DB1CB69AEC001ED069 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408CD1CB69AA7001ED069 /* Result.framework */; };
 		92E408DC1CB69AFF001ED069 /* XCTest3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925CEBDC1CB62AAF000AD550 /* XCTest3.framework */; };
-		92E408DE1CB69B22001ED069 /* Boilerplate.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408CC1CB69AA7001ED069 /* Boilerplate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92E408DF1CB69B27001ED069 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408CD1CB69AA7001ED069 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92E408E01CB69B33001ED069 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408CC1CB69AA7001ED069 /* Boilerplate.framework */; };
-		92E408E11CB69B36001ED069 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408CD1CB69AA7001ED069 /* Result.framework */; };
-		92E408E71CB69B60001ED069 /* Boilerplate.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408D41CB69ACF001ED069 /* Boilerplate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92E408E81CB69B63001ED069 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408D51CB69ACF001ED069 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92E408EB1CB69B99001ED069 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408D41CB69ACF001ED069 /* Boilerplate.framework */; };
-		92E408EC1CB69B9B001ED069 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408D51CB69ACF001ED069 /* Result.framework */; };
-		92E408ED1CB69BBC001ED069 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408D41CB69ACF001ED069 /* Boilerplate.framework */; };
-		92E408EE1CB69BC0001ED069 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E408D51CB69ACF001ED069 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,45 +42,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		92E408C91CB69A7B001ED069 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				92E408CA1CB69A88001ED069 /* Boilerplate.framework in Copy Frameworks */,
-				92E408CB1CB69A8B001ED069 /* Result.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92E408DD1CB69B10001ED069 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				92E408DE1CB69B22001ED069 /* Boilerplate.framework in Copy Frameworks */,
-				92E408DF1CB69B27001ED069 /* Result.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92E408E61CB69B52001ED069 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				92E408E71CB69B60001ED069 /* Boilerplate.framework in Copy Frameworks */,
-				92E408E81CB69B63001ED069 /* Result.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		653D5FA11CA516ED00441940 /* XCTest3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTest3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		653D5FA61CA516ED00441940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,12 +53,6 @@
 		925CEBE51CB62AAF000AD550 /* XCTest3Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XCTest3Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925CEBF81CB62B39000AD550 /* XCTest3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTest3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		925CEC011CB62B39000AD550 /* XCTest3Tests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XCTest3Tests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92E408BF1CB69A43001ED069 /* Boilerplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Boilerplate.framework; sourceTree = "<group>"; };
-		92E408C11CB69A43001ED069 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
-		92E408CC1CB69AA7001ED069 /* Boilerplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Boilerplate.framework; sourceTree = "<group>"; };
-		92E408CD1CB69AA7001ED069 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
-		92E408D41CB69ACF001ED069 /* Boilerplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Boilerplate.framework; sourceTree = "<group>"; };
-		92E408D51CB69ACF001ED069 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E408ED1CB69BBC001ED069 /* Boilerplate.framework in Frameworks */,
-				92E408EE1CB69BC0001ED069 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +68,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				653D5FAC1CA516ED00441940 /* XCTest3.framework in Frameworks */,
-				92E408EB1CB69B99001ED069 /* Boilerplate.framework in Frameworks */,
-				92E408EC1CB69B9B001ED069 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E408E01CB69B33001ED069 /* Boilerplate.framework in Frameworks */,
-				92E408E11CB69B36001ED069 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E408DA1CB69AE9001ED069 /* Boilerplate.framework in Frameworks */,
-				92E408DB1CB69AEC001ED069 /* Result.framework in Frameworks */,
 				92E408DC1CB69AFF001ED069 /* XCTest3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,8 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E408C71CB69A70001ED069 /* Boilerplate.framework in Frameworks */,
-				92E408C81CB69A73001ED069 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +98,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				925CEC021CB62B39000AD550 /* XCTest3.framework in Frameworks */,
-				92E408D31CB69AB3001ED069 /* Result.framework in Frameworks */,
-				92E408D21CB69AB0001ED069 /* Boilerplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +109,6 @@
 			children = (
 				653D5FA31CA516ED00441940 /* XCTest3 */,
 				653D5FAF1CA516ED00441940 /* XCTest3Tests */,
-				92E408BB1CB699E5001ED069 /* Frameworks */,
 				653D5FA21CA516ED00441940 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -219,46 +143,6 @@
 			);
 			name = XCTest3Tests;
 			path = Tests/XCTest3;
-			sourceTree = "<group>";
-		};
-		92E408BB1CB699E5001ED069 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				92E408BC1CB699F7001ED069 /* Mac */,
-				92E408BE1CB69A0D001ED069 /* tvOS */,
-				92E408BD1CB69A07001ED069 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		92E408BC1CB699F7001ED069 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				92E408D41CB69ACF001ED069 /* Boilerplate.framework */,
-				92E408D51CB69ACF001ED069 /* Result.framework */,
-			);
-			name = Mac;
-			path = Carthage/Build/Mac;
-			sourceTree = "<group>";
-		};
-		92E408BD1CB69A07001ED069 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				92E408CC1CB69AA7001ED069 /* Boilerplate.framework */,
-				92E408CD1CB69AA7001ED069 /* Result.framework */,
-			);
-			name = iOS;
-			path = Carthage/Build/iOS;
-			sourceTree = "<group>";
-		};
-		92E408BE1CB69A0D001ED069 /* tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				92E408BF1CB69A43001ED069 /* Boilerplate.framework */,
-				92E408C11CB69A43001ED069 /* Result.framework */,
-			);
-			name = tvOS;
-			path = Carthage/Build/tvOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,7 +197,6 @@
 				653D5FA71CA516ED00441940 /* Sources */,
 				653D5FA81CA516ED00441940 /* Frameworks */,
 				653D5FA91CA516ED00441940 /* Resources */,
-				92E408E61CB69B52001ED069 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,7 +233,6 @@
 				925CEBE11CB62AAF000AD550 /* Sources */,
 				925CEBE21CB62AAF000AD550 /* Frameworks */,
 				925CEBE31CB62AAF000AD550 /* Resources */,
-				92E408DD1CB69B10001ED069 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,7 +269,6 @@
 				925CEBFD1CB62B39000AD550 /* Sources */,
 				925CEBFE1CB62B39000AD550 /* Frameworks */,
 				925CEBFF1CB62B39000AD550 /* Resources */,
-				92E408C91CB69A7B001ED069 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -663,10 +544,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XCTest3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -688,10 +566,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XCTest3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -708,10 +583,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
@@ -723,10 +594,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
@@ -744,10 +611,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = XCTest3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -769,10 +633,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = XCTest3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -791,10 +652,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -808,10 +665,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -830,10 +683,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = XCTest3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -853,10 +703,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = XCTest3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -874,10 +721,6 @@
 		925CEC0D1CB62B39000AD550 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
 				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
@@ -890,10 +733,6 @@
 		925CEC0E1CB62B39000AD550 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
 				INFOPLIST_FILE = Tests/XCTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.XCTest3Tests;
